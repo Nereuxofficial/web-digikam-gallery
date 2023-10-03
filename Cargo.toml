@@ -1,0 +1,22 @@
+[package]
+name = "web-digikam-gallery"
+version = "0.1.0"
+authors = ["bene"]
+license = "GPLv3"
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
+color-eyre = "0.6.2"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+dotenvy = "0.15.7"
+axum = { version = "0.6.20", features = ["http2", "macros"]}
+tokio = { version = "1.32.0", features = ["full"] }
+tower-http = { version = "0.4.4", features = ["fs", "tokio"] }
+tower = {version = "0.4.13", features = ["full"]}
+moka = { version = "0.12.0", features = ["future"] }
+sqlx = { version = "0.7.1", features = ["runtime-tokio", "sqlite"] }
+serde = { version = "1.0.188", features = ["derive"] }
+liquid = "0.26.4"
+hyper = { version = "0.14.27", features = ["full"] }
